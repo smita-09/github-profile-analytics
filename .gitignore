@@ -12,8 +12,6 @@ env/
 # Jupyter and IPython
 .ipynb_checkpoints/
 
-# Data files
-/data/
 
 # Streamlit secrets
 .streamlit/secrets.toml
