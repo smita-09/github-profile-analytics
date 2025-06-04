@@ -4,11 +4,17 @@ from datetime import datetime
 
 import requests
 import pandas as pd
+import streamlit as st
 from dotenv import load_dotenv
 
-# Load token from .env
-load_dotenv()
-TOKEN = os.getenv("GITHUB_TOKEN")
+if "GITHUB_TOKEN" in st.secrets:
+    TOKEN = st.secrets["GITHUB_TOKEN"]
+else:
+    # Fall back to local .env (works in local dev)
+    from dotenv import load_dotenv
+    load_dotenv()
+    TOKEN = os.getenv("GITHUB_TOKEN")
+
 HEADERS = {"Authorization": f"token {TOKEN}"}
 
 USERNAME = "smita-09"  # Your GitHub username
