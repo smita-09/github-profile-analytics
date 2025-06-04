@@ -1,1 +1,30 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment files
 .env
+.venv/
+venv/
+env/
+
+# Jupyter and IPython
+.ipynb_checkpoints/
+
+# Data files
+/data/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VSCode or JetBrains settings (optional)
+.vscode/
+.idea/
+
+# Log files
+*.log
